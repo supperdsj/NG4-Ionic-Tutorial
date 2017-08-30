@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import {UsersPageModule} from "../pages/users/users.module";
 import {ShopPageModule} from "../pages/shop/shop.module";
 import {BuyoutPage} from "../pages/buyout/buyout";
+import {LifeCyclePageModule} from "../pages/life-cycle/life-cycle.module";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {BuyoutPage} from "../pages/buyout/buyout";
   imports: [
     BrowserModule,
     UsersPageModule,
+    LifeCyclePageModule,
     ShopPageModule,
     IonicModule.forRoot(MyApp)
   ],
