@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, OnInit} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Quote} from "../../data/quotes.interface";
 
 /**
  * Generated class for the QuotesPage page.
@@ -13,13 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-quotes',
   templateUrl: 'quotes.html',
 })
-export class QuotesPage {
-
+export class QuotesPage implements  OnInit{
+  quoteGroup: { category: string, quotes: Quote[], icon: string };
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ngOnInit(): void {
+    this.quoteGroup = this.navParams.data;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QuotesPage');
   }
+  onAddToFavorite(quote:any){
 
+  }
 }
