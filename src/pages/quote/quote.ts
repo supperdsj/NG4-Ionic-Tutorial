@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, OnInit} from '@angular/core';
+import {IonicPage, ModalController, NavController, NavParams, ViewController} from 'ionic-angular';
+import {Quote} from "../../data/quotes.interface";
 
 /**
  * Generated class for the QuotePage page.
@@ -13,13 +14,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-quote',
   templateUrl: 'quote.html',
 })
-export class QuotePage {
+export class QuotePage implements OnInit {
+  quote: Quote;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QuotePage');
   }
 
+  ngOnInit(): void {
+    this.quote = this.navParams.data;
+  }
+
+  onClose(remove:boolean=false) {
+    this.viewCtrl.dismiss(remove);
+  }
 }
