@@ -7,21 +7,26 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {UsersPageModule} from "../pages/users/users.module";
+import {ShopPageModule} from "../pages/shop/shop.module";
+import {BuyoutPage} from "../pages/buyout/buyout";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    BuyoutPage
   ],
   imports: [
     BrowserModule,
     UsersPageModule,
+    ShopPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    BuyoutPage
   ],
   providers: [
     StatusBar,
