@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
-import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, MenuController, ModalController, NavController, NavParams} from 'ionic-angular';
 import {QuotesService} from "../../services/quotes.service";
 import {Quote} from "../../data/quotes.interface";
 import {QuotePage} from "../quote/quote";
+import {SettingsService} from "../../services/settings.service";
 
 /**
  * Generated class for the FavoritesPage page.
@@ -19,7 +20,7 @@ import {QuotePage} from "../quote/quote";
 export class FavoritesPage {
   quotes: Quote[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private quotesService: QuotesService, private modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private quotesService: QuotesService, private modalCtrl: ModalController,private menuCtrl:MenuController,private settingService:SettingsService) {
   }
 
   ionViewDidLoad() {
@@ -44,4 +45,10 @@ export class FavoritesPage {
     this.quotesService.removeQuoteFromFavorite(quote);
     this.quotes = this.quotesService.getFavoriteQuotes();
   }
+  isAltBackground(){
+    return this.settingService.isAltBackground();
+  }
+  // onOpenMenu(){
+  //   this.menuCtrl.open();
+  // }
 }
