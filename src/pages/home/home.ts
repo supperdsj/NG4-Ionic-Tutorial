@@ -10,5 +10,13 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  onClick(){
+    console.log('Clicked!');
+  }
+  onTap(){
+    console.log('Tapped!');
+  }
+  onPress(){
+    console.log('Pressed!');
+  }
 }

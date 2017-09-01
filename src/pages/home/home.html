@@ -7,8 +7,16 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="gestures" (click)="onClick()">
+    Click me!
+  </div>
+  <div class="gestures" (tap)="onTap()">
+    Tap me!
+  </div>
+  <div class="gestures" (press)="onPress()">
+    Long Press me!
+  </div>
+  <div class="gestures" (press)="onPress()" (click)="onClick()" (tap)="onTap()">
+    All in me!
+  </div>
 </ion-content>
