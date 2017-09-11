@@ -13,16 +13,20 @@
 
 
 <ion-content padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-label>
-          Alternative background
-        </ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-toggle [checked]="checkAltBackground()" (ionChange)="onToggle($event)"></ion-toggle>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <!--<ion-grid>-->
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<ion-label>-->
+          <!--Alternative background-->
+        <!--</ion-label>-->
+        <!--<ion-toggle [checked]="checkAltBackground()" (ionChange)="onToggle($event)"></ion-toggle>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+  <!--</ion-grid>-->
+  <ion-list no-lines="">
+    <ion-item>
+      <ion-label>Alternative background</ion-label>
+      <ion-toggle [checked]="checkAltBackground()" (ionChange)="onToggle($event)"></ion-toggle>
+    </ion-item>
+  </ion-list>
 </ion-content>
