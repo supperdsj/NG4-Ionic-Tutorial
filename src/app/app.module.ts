@@ -15,6 +15,7 @@ import {RecipesService} from "../services/recipes.service";
 import {SigninPageModule} from "../pages/signin/signin.module";
 import {SignupPageModule} from "../pages/signup/signup.module";
 import {AuthService} from "../services/auth.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {AuthService} from "../services/auth.service";
     ShoppingListPageModule,
     TabsPageModule,
     SigninPageModule,
-    SignupPageModule
+    SignupPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
