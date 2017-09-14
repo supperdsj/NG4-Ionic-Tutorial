@@ -2,15 +2,13 @@
 
   <ion-navbar>
     <ion-buttons start>
-      <button ion-button="" icon-only="">
+      <button ion-button="" icon-only="" menuToggle="">
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>shopping list</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
   <form #f="ngForm" (submit)="onAddItem(f)">
